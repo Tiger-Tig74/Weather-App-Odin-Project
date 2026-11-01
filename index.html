@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Weather Now</title>
+    <script defer src="main.js"></script></head>
+    <body>
+        <div id="app">
+            <header>
+                <h1>Weather Now</h1>
+
+                <form id="search-form">
+                    <input
+                        id="city-input"
+                        type="text"
+                        placeholder="Enter a city..."
+                        required
+                        autocomplete="off"
+                    />
+                    <button type="submit">Search</button>
+                </form>
+
+                <div id="unit-toggle">
+                    <button
+                        id="unit-c"
+                        class="unit-btn active"
+                        data-unit="celsius"
+                    >
+                        °C
+                    </button>
+                    <button id="unit-f" class="unit-btn" data-unit="fahrenheit">
+                        °F
+                    </button>
+                </div>
+            </header>
+
+            <main id="main">
+                <div id="loading" class="hidden">
+                    <div class="spinner"></div>
+                    <p>Fetching weather…</p>
+                </div>
+
+                <div id="error" class="hidden"></div>
+
+                <div id="weather-display" class="hidden"></div>
+
+                <div id="empty-state">
+                    <p>Search for a city to see its weather forecast.</p>
+                </div>
+            </main>
+        </div>
+    </body>
+</html>
